@@ -1,0 +1,8 @@
+{
+  "watch": [
+    "src", "bin"
+  ],
+  "ext": "ts, js",
+  "ignore": ["src/**/*.test.ts"],
+  "exect": "node -r tsconfig-paths/register ./dist/src/server.js"
+}

@@ -1,0 +1,62 @@
+{
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  },
+  "compilerOptions": {
+    "incremental": true,
+    "composite": true,
+    "target": "ES6",
+    "lib": [
+      "ES6",
+      "ESNext",
+      "Decorators",
+    ],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "baseUrl": "./",
+    "paths": {
+      "@ioc/*": ["./src/ioc/*"],
+      "@user/*": ["./src/user/*"],
+      "@oauth/*": ["./src/oauth/*"],
+      "@shared/*": ["./src/shared/*"],
+      "@presentation/*": ["./src/presentation/*"]
+    },
+    "typeRoots": [
+      "@types",
+      "node_modules/@types"
+    ],
+    "resolveJsonModule": true,
+    "allowArbitraryExtensions": false,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "outDir": "dist",
+    "removeComments": true,
+    "noEmitHelpers": true,
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": false,
+    "noImplicitThis": true,
+    "useUnknownInCatchVariables": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "allowUnusedLabels": true,
+    "allowUnreachableCode": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "bin/**/*.ts"
+  ],
+  "exclude": ["node_modules"]
+}

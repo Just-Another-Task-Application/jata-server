@@ -1,0 +1,40 @@
+import { Model, } from './model';
+import { Token, } from './token.model';
+import { Group, } from './group.model';
+import { Profile, } from './profile.model';
+import { Address, } from './address.model';
+import { Permission, } from './permission.model';
+import { Gender, } from '../enums/gender.enum';
+import { Workspace, } from './workspace.model';
+
+export interface User extends Model {
+  name?: string;
+  email: string;
+  password?: string;
+  username: string;
+  phoneNumber: string;
+  preferredUsername: string;
+  nickname?: string;
+  givenName: string;
+  middleName?: string;
+  familyName: string;
+  secondLastName?: string;
+  profile?: Profile;
+  addresses?: Array<Address>;
+  picture: string;
+  website?: string;
+  gender?: Gender;
+  birthdate: Date;
+  zoneinfo?: string;
+  locale?: string;
+  tokens: Array<Token>;
+  permissions?: Array<Permission>;
+  workspaces?: Array<Workspace>;
+  groups?: Array<Group>;
+  active: boolean;
+  emailVerified?: boolean;
+  phoneNumberVerified?: boolean;
+  twoFactorEnabled?: boolean;
+  twoFactorSecret?: string;
+  lastSeen?: Date;
+}
